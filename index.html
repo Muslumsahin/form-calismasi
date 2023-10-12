@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Düzenleme</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <style>
+    .flag{
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+
+<div class="container mt-5">
+    <!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-bs-toggle="tab" href="#turkish"><img src="./img/turkey.png" class="flag me-1">Türkçe</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-bs-toggle="tab" href="#english"><img src="./img/united-states.png" class="flag me-1">English</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+
+<div class="tab-content col-md-6 col-sm-12">
+  <div class="tab-pane container active" id="turkish">
+    <form class="mt-2">
+      <div class="mb-3">
+        <label for="baslik" class="form-label">Baslık</label>
+        <input type="text" class="form-control" id="baslik">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="trUploadFile">Sayfa Resmi</label>
+        <input type="file" class="form-control" id="trUploadFile" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="trDrop">Bağlanti Sayısı</label>
+        <select class="form-select" id="trDrop" aria-label="Baglanti sayısı">
+          <option selected>Genel</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="trDurum" checked>
+        <label class="form-check-label" for="trDurum">Durum</label>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="trAnasayfaOk">
+        <label class="form-check-label" for="trAnasayfaOk">Anasayfada görünsün mü?</label>
+      </div>
+      <div class="mb-3">
+        <label for="trContent">İçerik</label>
+        <textarea class="form-control" rows="5" id="trContent"></textarea>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Gönder</button>
+        <button type="submit" class="btn btn-danger">İptal</button>
+      </div>
+    </form>
+  </div>
+<!----------------------------İNGİLİZCE BÖLÜMÜ--------------------------------->
+  <div class="tab-pane container fade" id="english">
+    <form class="mt-2">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="enUploadFile">Image</label>
+        <input type="file" class="form-control" id="enUploadFile" lang="en" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="enUpload">
+          Number of Connections</label>
+        <select class="form-select" id="enUpload" aria-label="Number of Connections">
+          <option selected>General</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="enSituation" checked>
+        <label class="form-check-label" for="enSituation">Situation</label>
+      </div>
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="enHomeOk">
+        <label class="form-check-label" for="enHomeOk">Should it appear on the homepage?</label>
+      </div>
+      <div class="mb-3">
+        <label for="enContent">Content</label>
+        <textarea class="form-control" rows="5" id="enContent"></textarea>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-danger">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>
